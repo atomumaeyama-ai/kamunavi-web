@@ -422,6 +422,30 @@ body {
     body { padding: 0; align-items: stretch; }
     .page { width: 100%; max-width: 100%; min-height: 100vh; }
   }
+
+  /* スマホ縦積み: 横並びの段組みを1列にしてはみ出しを防ぐ */
+  @media (max-width: 840px) {
+    .pillars,
+    .flow,
+    .guest-grid,
+    .invitation-row,
+    .invitation,
+    [style*="grid-template-columns:repeat(3,1fr)"] {
+      grid-template-columns: 1fr !important;
+    }
+    /* 流れ(DAY)の区切りを縦並び用に: 右罫線→下罫線、左余白リセット */
+    .flow-item {
+      border-right: none !important;
+      border-bottom: 1px solid rgba(184,144,58,0.15);
+      padding: 0 0 1.4rem 0 !important;
+      margin-bottom: 1.4rem;
+    }
+    .flow-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0 !important;
+      margin-bottom: 0;
+    }
+  }
 </style>
 </head>
 <body>
