@@ -415,6 +415,13 @@ body {
   body { background: black; padding: 0; }
   .page { width: 100%; }
 }
+
+  /* スマホ表示の最適化: 画面幅に収める（Instagram等のアプリ内ブラウザ対策） */
+  @media (max-width: 840px) {
+    html, body { max-width: 100%; overflow-x: hidden; }
+    body { padding: 0; align-items: stretch; }
+    .page { width: 100%; max-width: 100%; min-height: 100vh; }
+  }
 </style>
 </head>
 <body>
