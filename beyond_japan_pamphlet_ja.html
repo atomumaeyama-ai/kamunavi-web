@@ -44,17 +44,17 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --ink: #0f0e0b;
+  --ink: #081510;
   --gold: #b8903a;
   --gold-light: #d4aa5a;
   --cream: #f8f3ea;
   --paper: #f2ece0;
-  --fog: #7a7060;
+  --fog: rgba(245,240,232,0.5);
   --vermillion: #8b2020;
 }
 
 body {
-  background: #1a1610;
+  background: #060f0b;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -66,7 +66,7 @@ body {
 .page {
   width: 210mm;
   min-height: 297mm;
-  background: var(--cream);
+  background: linear-gradient(160deg, #0c1f18 0%, #0a1a14 50%, #07120d 100%);
   position: relative;
   overflow: hidden;
 }
@@ -165,7 +165,7 @@ body {
   font-family: 'Shippori Mincho B1', serif;
   font-size: 1.05rem;
   line-height: 2;
-  color: var(--ink);
+  color: rgba(245,240,232,0.85);
   font-weight: 400;
 }
 
@@ -257,7 +257,7 @@ body {
 .flow-title {
   font-family: 'Shippori Mincho B1', serif;
   font-size: 0.82rem;
-  color: var(--ink);
+  color: rgba(245,240,232,0.85);
   margin-bottom: 0.4rem;
   font-weight: 500;
 }
@@ -281,7 +281,7 @@ body {
 
 .guest-item {
   padding: 1rem 1.2rem;
-  background: var(--paper);
+  background: var(--ink);
   border-top: 2px solid var(--gold);
 }
 
@@ -358,7 +358,7 @@ body {
   font-family: 'Shippori Mincho B1', serif;
   font-size: 0.8rem;
   line-height: 1.8;
-  color: var(--ink);
+  color: rgba(245,240,232,0.85);
 }
 
 /* フッター */
