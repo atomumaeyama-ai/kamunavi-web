@@ -428,10 +428,42 @@ body {
       margin-bottom: 0;
     }
   }
+
+  /* 言語切替メニュー */
+  .lang-switch {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.7rem 1rem;
+    background: rgba(0,0,0,0.28);
+    border-bottom: 1px solid rgba(184,144,58,0.15);
+  }
+  .lang-switch a {
+    color: rgba(245,240,232,0.5);
+    text-decoration: none;
+    font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+    transition: color 0.3s ease;
+  }
+  .lang-switch a:hover { color: rgba(245,240,232,0.85); }
+  .lang-switch a.active { color: var(--gold); pointer-events: none; }
+  .lang-switch .sep { color: rgba(245,240,232,0.22); font-size: 0.6rem; }
 </style>
 </head>
 <body>
 <div class="page">
+  <nav class="lang-switch">
+    <a href="/">English</a>
+    <span class="sep">·</span>
+    <a href="/beyond_japan_pamphlet_ja.html" class="active">日本語</a>
+    <span class="sep">·</span>
+    <a href="/beyond_japan_pamphlet_zh.html">繁體中文</a>
+  </nav>
+
 
   <!-- ヘッダー -->
   
